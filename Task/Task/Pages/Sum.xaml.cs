@@ -27,7 +27,6 @@ namespace Task.Pages
             InitializeComponent();
             Parameters = parameters;
 
-            Console.WriteLine(Parameters.ToString());
             Tekst.Text = Parameters.ToString();
         }
 
