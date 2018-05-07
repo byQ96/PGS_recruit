@@ -21,11 +21,13 @@ namespace Task
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Parameters parameters = new Parameters();
+
         public MainWindow()
         {
             InitializeComponent();
 
-            Imie ImiePage = new Imie();
+            Imie ImiePage = new Imie(parameters);
             Frame.NavigationService.Navigate(ImiePage);
         }
 

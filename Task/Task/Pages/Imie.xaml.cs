@@ -21,14 +21,18 @@ namespace Task
     /// </summary>
     public partial class Imie : Page
     {
-        public Imie()
+        public Parameters Parameters;
+
+        public Imie(Parameters parameters)
         {
             InitializeComponent();
+            Parameters = parameters;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Nazwisko NazwiskoPage = new Nazwisko();
+            Parameters.Imie = ImieBlock.Text;
+            Nazwisko NazwiskoPage = new Nazwisko(Parameters);
             this.NavigationService.Navigate(NazwiskoPage);
         }
     }

@@ -20,17 +20,23 @@ namespace Task.Pages
     /// </summary>
     public partial class Sum : Page
     {
-        public Sum()
+        public Parameters Parameters;
+
+        public Sum(Parameters parameters)
         {
             InitializeComponent();
+            Parameters = parameters;
+
+            Console.WriteLine(Parameters.ToString());
+            Tekst.Text = Parameters.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) // wstecz
         {
-            this.NavigationService.Navigate(new Numer());
+            this.NavigationService.Navigate(new Numer(Parameters));
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e) // zakończ
         {
             System.Windows.Application.Current.Shutdown();
         }

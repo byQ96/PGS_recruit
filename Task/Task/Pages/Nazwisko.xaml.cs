@@ -20,19 +20,24 @@ namespace Task.Pages
     /// </summary>
     public partial class Nazwisko : Page
     {
-        public Nazwisko()
+        public Parameters Parameters;
+
+        public Nazwisko(Parameters parameters)
         {
             InitializeComponent();
+            Parameters = parameters;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) // wstecz
         {
-            this.NavigationService.Navigate(new Imie());
+            Parameters.Nazwisko = NazwiskoBlock.Text;
+            this.NavigationService.Navigate(new Imie(Parameters));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) // dalej
         {
-            this.NavigationService.Navigate(new Adres());
+            Parameters.Nazwisko = NazwiskoBlock.Text;
+            this.NavigationService.Navigate(new Adres(Parameters));
         }
     }
 }

@@ -20,19 +20,24 @@ namespace Task.Pages
     /// </summary>
     public partial class Numer : Page
     {
-        public Numer()
+        public Parameters Parameters;
+
+        public Numer(Parameters parameters)
         {
             InitializeComponent();
+            Parameters = parameters;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) // wstecz
         {
-            this.NavigationService.Navigate(new Adres());
+            Parameters.Numer = NumerBlock.Text;
+            this.NavigationService.Navigate(new Adres(Parameters));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) // dalej
         {
-            this.NavigationService.Navigate(new Sum());
+            Parameters.Numer = NumerBlock.Text;
+            this.NavigationService.Navigate(new Sum(Parameters));
         }
     }
 }
