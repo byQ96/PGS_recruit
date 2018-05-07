@@ -12,24 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Task.Pages;
 
-namespace Task
+namespace Task.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy Imie.xaml
+    /// Logika interakcji dla klasy Numer.xaml
     /// </summary>
-    public partial class Imie : Page
+    public partial class Numer : Page
     {
-        public Imie()
+        public Numer()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) // wstecz
         {
-            Nazwisko NazwiskoPage = new Nazwisko();
-            this.NavigationService.Navigate(NazwiskoPage);
+            this.NavigationService.Navigate(new Adres());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e) // dalej
+        {
+            this.NavigationService.Navigate(new Sum());
         }
     }
 }

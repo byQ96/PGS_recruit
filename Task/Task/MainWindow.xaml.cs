@@ -21,19 +21,17 @@ namespace Task
     /// </summary>
     public partial class MainWindow : Window
     {
-        Imie ImiePage =  new Imie();
-        Nazwisko NazwiskoPage = new Nazwisko();
-
         public MainWindow()
         {
             InitializeComponent();
+
+            Imie ImiePage = new Imie();
+            Frame.NavigationService.Navigate(ImiePage);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
-            Main.Content = ImiePage;
+
         }
-
-
     }
 }

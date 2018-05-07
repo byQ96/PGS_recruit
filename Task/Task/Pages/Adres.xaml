@@ -1,4 +1,4 @@
-﻿<Page x:Class="Task.Pages.Nazwisko"
+﻿<Page x:Class="Task.Pages.Adres"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,13 +6,12 @@
       xmlns:local="clr-namespace:Task.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="250" d:DesignWidth="270"
-      Title="Nazwisko">
+      Title="Adres">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="30,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Podaj "/><Run Text="Nazwisko"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="NazwiskoBlock" HorizontalAlignment="Left" Height="23" Margin="30,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Podaj adres zamieszania"/>
+        <TextBox x:Name="AdresBlock" HorizontalAlignment="Left" Height="23" Margin="30,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Dalej" HorizontalAlignment="Left" Margin="185,200,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button Content="Wstecz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="30,200,0,0" Click="Button_Click"/>
-
     </Grid>
 </Page>

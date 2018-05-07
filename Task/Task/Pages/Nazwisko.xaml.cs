@@ -24,5 +24,15 @@ namespace Task.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e) // wstecz
+        {
+            this.NavigationService.Navigate(new Imie());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e) // dalej
+        {
+            this.NavigationService.Navigate(new Adres());
+        }
     }
 }
