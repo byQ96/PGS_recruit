@@ -27,6 +27,7 @@ namespace Task
         {
             InitializeComponent();
             Parameters = parameters;
+            ImieBlock.Text = Parameters.Imie;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

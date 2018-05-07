@@ -26,6 +26,7 @@ namespace Task.Pages
         {
             InitializeComponent();
             Parameters = parameters;
+            NazwiskoBlock.Text = Parameters.Nazwisko;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) // wstecz

@@ -26,6 +26,7 @@ namespace Task.Pages
         {
             InitializeComponent();
             Parameters = parameters;
+            AdresBlock.Text = Parameters.Adres;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) // wstecz
