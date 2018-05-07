@@ -28,12 +28,7 @@ namespace Task
             InitializeComponent();
 
             Imie ImiePage = new Imie(parameters);
-            Frame.NavigationService.Navigate(ImiePage);
-        }
-
-        private void Frame_Navigated(object sender, NavigationEventArgs e)
-        {
-
+            Frame.NavigationService.Navigate(ImiePage); // wywołanie pierwszej strony
         }
     }
 }

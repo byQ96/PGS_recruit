@@ -10,6 +10,6 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="30,40,0,0" TextWrapping="Wrap" Text="Podaj Imię:" VerticalAlignment="Top"/>
         <TextBox x:Name="ImieBlock" HorizontalAlignment="Left" Height="23" Margin="30,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Dalej" HorizontalAlignment="Left" Margin="185,201,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Dalej" HorizontalAlignment="Left" Margin="170,200,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Page>

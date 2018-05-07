@@ -22,7 +22,7 @@ namespace Task.Pages
     {
         public Parameters Parameters;
 
-        public Sum(Parameters parameters)
+        public Sum(Parameters parameters) // przepisanie i wypisanie parametrów
         {
             InitializeComponent();
             Parameters = parameters;

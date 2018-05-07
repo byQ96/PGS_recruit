@@ -9,9 +9,16 @@
       Title="Adres">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="30,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Podaj adres zamieszania"/>
-        <TextBox x:Name="AdresBlock" HorizontalAlignment="Left" Height="23" Margin="30,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Dalej" HorizontalAlignment="Left" Margin="185,200,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Podaj adres zamiesz"/><Run Text="k"/><Run Text="ania"/><Run Text=":"/></TextBlock>
+        <TextBox x:Name="UlicaBlock" HorizontalAlignment="Left" Height="23" Margin="30,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Dalej" HorizontalAlignment="Left" Margin="170,200,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button Content="Wstecz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="30,200,0,0" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Ulica"/>
+        <TextBox x:Name="NrDomuBlock" HorizontalAlignment="Left" Height="23" Margin="172,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBlock HorizontalAlignment="Left" Margin="172,64,-22,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Text="Nr"/><Run Text=" domu"/></TextBlock>
+        <TextBox x:Name="MiejscowoscBlock" HorizontalAlignment="Left" Height="23" Margin="30,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Miejscowość"/>
+        <TextBox x:Name="KodPoczBlock" HorizontalAlignment="Left" Height="23" Margin="172,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBlock HorizontalAlignment="Left" Margin="172,108,-22,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="Kod pocztowy"/>
     </Grid>
 </Page>

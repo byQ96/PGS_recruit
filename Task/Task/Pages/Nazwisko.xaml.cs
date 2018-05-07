@@ -22,7 +22,7 @@ namespace Task.Pages
     {
         public Parameters Parameters;
 
-        public Nazwisko(Parameters parameters)
+        public Nazwisko(Parameters parameters) // przepisanie parametrów
         {
             InitializeComponent();
             Parameters = parameters;
@@ -38,7 +38,16 @@ namespace Task.Pages
         private void Button_Click_1(object sender, RoutedEventArgs e) // dalej
         {
             Parameters.Nazwisko = NazwiskoBlock.Text;
-            this.NavigationService.Navigate(new Adres(Parameters));
+
+            if (NazwiskoBlock.Text == "")
+            {
+                MessageBox.Show("Wypełnij pole: Nazwisko", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            else
+            {
+                this.NavigationService.Navigate(new Adres(Parameters));
+            }
         }
     }
 }

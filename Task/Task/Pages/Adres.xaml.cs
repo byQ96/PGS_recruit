@@ -22,23 +22,56 @@ namespace Task.Pages
     {
         public Parameters Parameters;
 
-        public Adres(Parameters parameters)
+        public Adres(Parameters parameters) // przepisz parametry
         {
             InitializeComponent();
             Parameters = parameters;
-            AdresBlock.Text = Parameters.Adres;
+            UlicaBlock.Text = Parameters.Ulica;
+            NrDomuBlock.Text = Parameters.NrDomu;
+            MiejscowoscBlock.Text = Parameters.Miejscowosc;
+            KodPoczBlock.Text = Parameters.KodPocz;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) // wstecz
         {
-            Parameters.Adres = AdresBlock.Text;
+            Parameters.Ulica = UlicaBlock.Text;
+            Parameters.NrDomu = NrDomuBlock.Text;
+            Parameters.Miejscowosc = MiejscowoscBlock.Text;
+            Parameters.KodPocz = KodPoczBlock.Text;
             this.NavigationService.Navigate(new Nazwisko(Parameters));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) // dalej
         {
-            Parameters.Adres = AdresBlock.Text;
-            this.NavigationService.Navigate(new Numer(Parameters));
+            Parameters.Ulica = UlicaBlock.Text;
+            Parameters.NrDomu = NrDomuBlock.Text;
+            Parameters.Miejscowosc = MiejscowoscBlock.Text;
+            Parameters.KodPocz = KodPoczBlock.Text;
+
+            if (UlicaBlock.Text == "")
+            {
+                MessageBox.Show("Wypełnij pole: Ulica", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            else if (NrDomuBlock.Text == "")
+            {
+                MessageBox.Show("Wypełnij pole: Numer Domu", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            else if (MiejscowoscBlock.Text == "")
+            {
+                MessageBox.Show("Wypełnij pole: Miejscowość", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            else if (KodPoczBlock.Text == "")
+            {
+                MessageBox.Show("Wypełnij pole: Kod pocztowy", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            else
+            {
+                this.NavigationService.Navigate(new Numer(Parameters));
+            }
         }
     }
 }

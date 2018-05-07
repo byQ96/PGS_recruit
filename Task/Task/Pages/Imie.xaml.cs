@@ -23,18 +23,26 @@ namespace Task
     {
         public Parameters Parameters;
 
-        public Imie(Parameters parameters)
+        public Imie(Parameters parameters) // przepisanie parametrów
         {
             InitializeComponent();
             Parameters = parameters;
             ImieBlock.Text = Parameters.Imie;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) // dalej
         {
             Parameters.Imie = ImieBlock.Text;
-            Nazwisko NazwiskoPage = new Nazwisko(Parameters);
-            this.NavigationService.Navigate(NazwiskoPage);
+
+            if (ImieBlock.Text == "")
+            {
+                MessageBox.Show("Wypełnij pole: Imię", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            else
+            {
+                this.NavigationService.Navigate(new Nazwisko(Parameters));
+            }
         }
     }
 }

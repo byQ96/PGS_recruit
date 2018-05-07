@@ -22,7 +22,7 @@ namespace Task.Pages
     {
         public Parameters Parameters;
 
-        public Numer(Parameters parameters)
+        public Numer(Parameters parameters) // przepisanie parametrów
         {
             InitializeComponent();
             Parameters = parameters;
@@ -38,7 +38,16 @@ namespace Task.Pages
         private void Button_Click_1(object sender, RoutedEventArgs e) // dalej
         {
             Parameters.Numer = NumerBlock.Text;
-            this.NavigationService.Navigate(new Sum(Parameters));
+
+            if (NumerBlock.Text == "")
+            {
+                MessageBox.Show("Wypełnij pole: Numer Telefonu", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            else
+            {
+                this.NavigationService.Navigate(new Sum(Parameters));
+            }
         }
     }
 }
